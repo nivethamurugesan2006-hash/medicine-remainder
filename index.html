@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Medicine App Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="login-card">
+  <h1>💊 Medicine Reminder</h1>
+  <p>Welcome back! Please login</p>
+
+  <input type="text" id="user" placeholder="Username">
+  <input type="password" id="pass" placeholder="Password">
+
+  <button onclick="login()">Login</button>
+
+  <p class="hint">Hint: admin / 1234</p>
+</div>
+
+<script>
+function login(){
+  let u = document.getElementById("user").value;
+  let p = document.getElementById("pass").value;
+
+  if(u === "admin" && p === "1234"){
+    window.location.href = "home.html";
+  } else {
+    alert("❌ Wrong username or password");
+  }
+}
+</script>
+
+</body>
+</html>
